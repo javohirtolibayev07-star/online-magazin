@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        h1 {
+            margin-top: 0;
+        }
+        .item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .total {
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #1f2937;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background: #2563eb;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 8px;
+        }
+        .clear-btn {
+            display: inline-block;
+            margin-left: 10px;
+            text-decoration: none;
+            background: #ef4444;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Savat</h1>
+
+        {% if items %}
+            {% for item in items %}
+            <div class="item">
+                <div>
+                    <strong>{{ item.name }}</strong><br>
+                    {{ item.qty }} dona
+                </div>
+                <div>{{ item.item_total }} so'm</div>
+            </div>
+            {% endfor %}
+
+            <div class="total">Jami: {{ total }} so'm</div>
+
+            <a href="/" class="btn">Xaridni davom ettirish</a>
+            <a href="/clear" class="clear-btn">Savatni bo'shatish</a>
+        {% else %}
+            <p>Savat bo'sh.</p>
+            <a href="/" class="btn">Mahsulotlarga qaytish</a>
+        {% endif %}
+    </div>
+</body>
+</html>
