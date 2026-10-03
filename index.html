@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Javohir Tolibayev — Dasturchi</title>
+<meta name="description" content="Javohir Tolibayev portfolio: Python, Flask va veb dasturlash loyihalari.">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef2f6; --ink:#10243a; --muted:#52657a; --line:#c9d3de;
+  --accent:#2f5bff; --accent-ink:#fff; --signal:#ffc93c; --card:#fff;
+  box-sizing:border-box;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0c1622; --ink:#e8eef6; --muted:#9bb0c6; --line:#243649; --accent:#6f8cff; --accent-ink:#0c1622; --card:#12212f;}
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "IBM Plex Sans",system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+header.nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.nav b{font:800 20px "Bricolage Grotesque",sans-serif}
+.nav nav{display:flex;gap:22px}
+.nav nav a{text-decoration:none;color:var(--muted)}
+.nav nav a:hover{color:var(--ink)}
+.hero{padding:72px 0 88px}
+.hero h1{font:800 clamp(52px,12vw,138px)/.92 "Bricolage Grotesque",sans-serif;letter-spacing:-.035em;margin:0 0 28px}
+.hero h1 span{display:block;background:linear-gradient(transparent 62%,var(--signal) 62% 92%,transparent 92%);width:fit-content}
+.hero p{max-width:34em;color:var(--muted);font-size:20px;margin:0 0 32px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 24px;border-radius:999px;text-decoration:none;font-weight:500;border:2px solid var(--ink)}
+.btn.main{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn:hover{transform:translateY(-2px)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font:800 clamp(30px,5vw,44px)/1.1 "Bricolage Grotesque",sans-serif;margin:0 0 28px;letter-spacing:-.02em}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.about p{margin:0 0 16px;max-width:34em}
+.skills{display:flex;flex-wrap:wrap;gap:10px;align-content:flex-start;padding:0;margin:0;list-style:none}
+.skills li{padding:7px 16px;border:1.5px solid var(--ink);border-radius:999px;font-weight:500}
+.projects{display:grid;gap:20px}
+.project{display:grid;grid-template-columns:1fr auto;gap:8px 24px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 28px}
+.project h3{font:800 24px "Bricolage Grotesque",sans-serif;margin:0}
+.project p{margin:0;color:var(--muted);grid-column:1}
+.project .tags{font-size:14px;color:var(--accent);margin-top:4px}
+.project a{grid-column:2;grid-row:1 / span 3;text-decoration:none;font-weight:500;border-bottom:2px solid var(--signal)}
+.contact p{max-width:30em;color:var(--muted);margin:0 0 24px}
+.contact .mail{font:800 clamp(24px,5vw,44px) "Bricolage Grotesque",sans-serif;text-decoration:none;border-bottom:4px solid var(--signal);word-break:break-all}
+footer{padding:36px 0 48px;color:var(--muted);font-size:15px}
+@media (max-width:720px){
+  .about{grid-template-columns:1fr}
+  .nav nav{gap:14px;font-size:15px}
+  .project{grid-template-columns:1fr}
+  .project a{grid-column:1;grid-row:auto;justify-self:start;margin-top:10px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="nav">
+    <b>JT</b>
+    <nav>
+      <a href="#about">Men haqimda</a>
+      <a href="#projects">Loyihalar</a>
+      <a href="#contact">Aloqa</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Javohir <span>Tolibayev</span></h1>
+      <p>Men Python va Flask yordamida veb-saytlar va dasturlar yarataman. Maqsadim: oddiy, tez va foydalanish qulay mahsulotlar qurish.</p>
+      <div class="btns">
+        <a class="btn main" href="#projects">Loyihalarni ko'rish</a>
+        <a class="btn" href="#contact">Bog'lanish</a>
+      </div>
+    </div>
+
+    <section id="about">
+      <h2>Men haqimda</h2>
+      <div class="about">
+        <div>
+          <p>Men dasturlashni o'rganayotgan va real loyihalar ustida ishlayotgan dasturchiman. Veb-saytning ham ko'rinadigan qismini (HTML, CSS, JavaScript), ham serverdagi mantiqini (Python, Flask) yozaman.</p>
+          <p>Yangi texnologiyalarni o'rganish va o'rganganimni loyihada sinab ko'rish menga yoqadi.</p>
+        </div>
+        <ul class="skills" aria-label="Ko'nikmalar">
+          <li>Python</li><li>Flask</li><li>HTML</li><li>CSS</li>
+          <li>JavaScript</li><li>SQL</li><li>Git va GitHub</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Loyihalar</h2>
+      <div class="projects">
+        <article class="project">
+          <h3>Flask e-commerce ilovasi</h3>
+          <p>Mahsulotlar katalogi, savat va buyurtmalar bilan internet-do'kon.</p>
+          <p class="tags">Python, Flask, SQL</p>
+          <a href="https://github.com/javohirtolibayev07-star/techdastur">Kodni ko'rish</a>
+        </article>
+        <article class="project">
+          <h3>Tech Dastur</h3>
+          <p>Dasturlar va texnologiyalar haqida ma'lumot beruvchi sayt.</p>
+          <p class="tags">HTML, CSS, JavaScript</p>
+          <a href="https://github.com/javohirtolibayev07-star/techdastur">Kodni ko'rish</a>
+        </article>
+        <article class="project">
+          <h3>Vazifalar ro'yxati</h3>
+          <p>Kundalik ishlarni qo'shish, belgilash va o'chirish mumkin bo'lgan ilova.</p>
+          <p class="tags">JavaScript</p>
+          <a href="https://github.com/javohirtolibayev07-star">Kodni ko'rish</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Aloqa</h2>
+      <p>Loyiha yoki hamkorlik bo'yicha yozing. Odatda bir kun ichida javob beraman.</p>
+      <a class="mail" href="mailto:sizning@email.com">sizning@email.com</a>
+      <div class="btns" style="margin-top:28px">
+        <a class="btn" href="https://github.com/javohirtolibayev07-star">GitHub</a>
+        <a class="btn" href="https://t.me/sizning_username">Telegram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Javohir Tolibayev</footer>
+</div>
+</body>
+</html>
